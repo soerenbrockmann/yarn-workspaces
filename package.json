@@ -1,0 +1,17 @@
+{
+  "name": "yarn-workspaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/soerenbrockmann/yarn-workspaces.git",
+  "author": "Soeren Brockmann <info@walkee.ai>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/common/*",
+    "packages/services/*"
+  ],
+  "scripts": {
+    "build": "tsc --build --force",
+    "users-service": "yarn build && yarn workspace users-service"
+  }
+}
